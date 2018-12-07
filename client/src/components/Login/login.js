@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 import Navbar from '../NavBar/Navbar';
@@ -57,8 +58,9 @@ class Login extends Component {
               value={this.state.password}
               onChange={this.onInputChange}
             />
-
-            <input type="submit" value="Log in" />
+            <Link to="/project">
+              <input type="submit" value="Log in" />
+            </Link>
           </form>
         </div>
       </div>

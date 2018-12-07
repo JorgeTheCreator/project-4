@@ -1,0 +1,32 @@
+.Searchbar {
+  display: inline-flex;
+}
+.field {
+  background-color: #85838f96;
+  border: 1px solid #85838f96;
+  padding: 0%;
+}
+fanName {
+  background: pink;
+  color: green;
+}
+.text1 {
+  border: 0;
+  padding: 0.5rem 53.5rem 0.5rem 1rem;
+  flex: 1;
+}
+.searchIcon {
+  padding: 0.5rem;
+}
+
+.fa-search:before {
+  content: '\f002';
+  position: relative;
+  top: 5%;
+  left: 6679%;
+}
+.searchButton {
+  border-radius: 0;
+  font-size: 13px;
+  padding: 20px;
+}
