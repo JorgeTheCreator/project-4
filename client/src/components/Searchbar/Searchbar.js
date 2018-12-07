@@ -18,14 +18,14 @@ class Searchbar extends Component {
 
   render() {
     return (
-      <div className="Searchbar">
+      <div className="Searchbar animated fadeInRightBig ">
         <i className="fa fa-search searchIcon" />
         <form className="form" onSubmit={this.onFormSubmit}>
           <div className="field">
             <label className="searchButton">Mechanical</label>
             <input
               type="text1"
-              className="text1"
+              className="text1 "
               placeholder="Search...."
               value={this.state.term}
               onChange={this.onInputChange}

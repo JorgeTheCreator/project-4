@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../NavBar/Navbar';
 import './Signup.css';
 
 class Signup extends Component {
   state = {
+    animate: true,
     name: '',
     email: '',
     password: '',
@@ -25,12 +27,15 @@ class Signup extends Component {
     };
     console.log(newUser);
   };
+  onNavBarClick = () => {
+    this.setState({ animate: true });
+  };
 
   render() {
     const { errors } = this.state;
     return (
       <div>
-        <Navbar />
+        <Navbar onClick={this.onNavBarClick} />
         <h1 id="title">
           j<span className="char2">o</span>
           <span className="animated infinite bounce char3 ">o</span>le
@@ -41,7 +46,7 @@ class Signup extends Component {
         <h2>Registration</h2>
 
         <div>
-          <form onSubmit={this.onSubmit}>
+          <form onSubmit={this.onSubmit} className="animated flipInY ">
             <input
               type="text"
               id="email"
@@ -78,7 +83,9 @@ class Signup extends Component {
               onChange={this.onInputChange}
             />
 
-            <input type="submit" value="Sign up" />
+            <Link to="/">
+              <input type="submit" value="Sign up" />
+            </Link>
           </form>
         </div>
       </div>
