@@ -4,7 +4,10 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const users = require('./routes/api/users');
 const app = express();
+const cors = require('cors');
 // Bodyparser middleware
+
+app.use(cors());
 app.use(
   bodyParser.urlencoded({
     extended: false

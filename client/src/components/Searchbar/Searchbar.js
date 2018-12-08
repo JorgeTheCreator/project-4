@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
+
 class Searchbar extends Component {
   state = { term: '' };
 
@@ -8,7 +9,6 @@ class Searchbar extends Component {
   };
   onFormSubmit = e => {
     e.preventDefault();
-    this.props.onFormSubmit(this.state.term);
   };
   componentDidMount() {
     fetch('https://swapi.co/api/people/1')
@@ -23,6 +23,7 @@ class Searchbar extends Component {
         <form className="form" onSubmit={this.onFormSubmit}>
           <div className="field">
             <label className="searchButton">Mechanical</label>
+
             <input
               type="text1"
               className="text1 "
